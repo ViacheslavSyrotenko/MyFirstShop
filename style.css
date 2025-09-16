@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+    line-height: 1.6;
+
+
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    justify-content: space-between;
+    box-shadow:0 4px 18px rgba(10,10,10,0.06)
+}
+
+#nav-bar h4 {
+    font-size: 1.3rem;
+    color: #007bff;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.cart-btn {
+    padding: 0.7rem 1.1rem;
+    border-radius: 30px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-weight: 600;
+
+}
+
+/* Hero */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+#hero .container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+#hero h1{
+    font-size: 2.7rem;
+    font-weight: 800;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 1.2rem;
+}
+.hero-btn {
+    background: #007bff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+}
