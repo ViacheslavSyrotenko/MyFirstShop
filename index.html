@@ -16,7 +16,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="cart-btn" >🛒 Cart</button>
+            <button class="cart-btn" onclick="openSidebar()">🛒 Cart</button>
         </div>
     </nav>
 
@@ -117,6 +117,20 @@
         <div>© 2025 MyShop</div>
         <div>Made with ♥</div>
     </footer>
+
+<!-- Cart Content -->
+    <div class="overlay">
+
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <div class="cart-header">
+            <h4>🛍️ Shopping Cart</h4>
+            <button class="closing-btn" onclick="closeSidebar()">X</button>
+        </div>
+        <div class="empty-cart-icon">🛒</div>
+        <p class="empty-cart-text">Your cart is empty</p>
+    </div>
 
     <script src="./script.js"></script>
 </body>
