@@ -100,6 +100,11 @@ body {
 
 /* Product */
 
+.grid-top {
+    padding: 0 2rem;
+    font-size: 2rem;
+}
+
 .product-grid{
     padding: 2rem;
     display: grid;
@@ -117,6 +122,29 @@ body {
 .product-image {
     text-align: center;
     padding: 2rem 0;
+    font-size: 3rem;
+}
+
+.product-name {
+    font-weight: 600;
+}
+
+.product-description {
+    margin-bottom: 1rem;
+}
+
+.price-and-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy-button {
+    border: none;
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
 }
 
 /* Footer */
@@ -186,6 +214,10 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 20px;
+}
+
+.empty-cart {
+    /*  */
 }
 
 .empty-cart-icon {

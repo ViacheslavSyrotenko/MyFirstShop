@@ -112,63 +112,87 @@
         </div>
 
     </section> -->
-
+    <h4 class="grid-top">Featured Products</h4>
     <div class="product-grid">
         <div class="product-card" data-product-id="1">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button"  onclick="addToCart(1)">Add</button>
+            </div>
+
         </div>
         <div class="product-card" data-product-id="2">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button" onclick="addToCart(2)">Add</button>
+            </div>
+
         </div>
         <div class="product-card" data-product-id="3">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button" onclick="addToCart(3)">Add</button>
+            </div>
+
         </div>
         <div class="product-card" data-product-id="4">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button" onclick="addToCart(4)">Add</button>
+            </div>
+
         </div>
         <div class="product-card" data-product-id="5">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button" onclick="addToCart(5)">Add</button>
+            </div>
+
         </div>
         <div class="product-card" data-product-id="6">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button" onclick="addToCart(6)">Add</button>
+            </div>
+
         </div>
         <div class="product-card" data-product-id="7">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button" onclick="addToCart(7)">Add</button>
+            </div>
+
         </div>
         <div class="product-card" data-product-id="8">
             <div class="product-image"></div>
             <div class="product-name"></div>
             <div class="product-description"></div>
-            <div class="product-price"></div>
-            <button class="buy-button">Add to Cart</button>
+            <div class="price-and-btn">
+                <div class="product-price"></div>
+                <button class="buy-button" onclick="addToCart(8)">Add</button>
+            </div>
+
         </div>
     </div>
 
@@ -187,8 +211,11 @@
             <h4>🛍️ Shopping Cart</h4>
             <button class="closing-btn" onclick="closeSidebar()">X</button>
         </div>
-        <div class="empty-cart-icon">🛒</div>
-        <p class="empty-cart-text">Your cart is empty</p>
+        <div class="empty-cart" id="emptyCart">
+            <div class="empty-cart-icon">🛒</div>
+            <p class="empty-cart-text">Your cart is empty</p>
+        </div>
+
     </div>
 
     <script src="./script.js"></script>
