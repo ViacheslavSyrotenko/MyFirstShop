@@ -207,13 +207,23 @@
     </div>
 
     <div id="sidebar" class="sidebar">
-        <div class="cart-header">
-            <h4>🛍️ Shopping Cart</h4>
-            <button class="closing-btn" onclick="closeSidebar()">X</button>
+            <div class="cart-header">
+                <h4>🛍️ Shopping Cart</h4>
+                <button class="closing-btn" onclick="closeSidebar()">X</button>
+            </div>
+        <div class="sidebarcontainer" id="sidebarcontainer">
+            <div class="empty-cart" id="emptyCart">
+                <div class="empty-cart-icon">🛒</div>
+                <p class="empty-cart-text">Your cart is empty</p>
+            </div>
         </div>
-        <div class="empty-cart" id="emptyCart">
-            <div class="empty-cart-icon">🛒</div>
-            <p class="empty-cart-text">Your cart is empty</p>
+
+        <div class="total-cart">
+            <div class="total-cart-text">
+                <h4>Total</h4>
+                <h4>0$</h4>
+            </div>
+            <button class="checkout">Checkout</button>
         </div>
 
     </div>

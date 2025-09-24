@@ -7,10 +7,10 @@ function openSidebar() {
 
     document.body.style.overflow = 'hidden';
 
-    const emptyCart = document.getElementById('emptyCart')
-    emptyCart.style.display = 'none';
-    if (cart.length != 0) {
-        
+
+    if (cart.length > 0) {
+        const emptyCart = document.getElementById('emptyCart')
+        emptyCart.style.display = 'none';
     }
 }
 
@@ -88,16 +88,11 @@ let = cart = [];
 function populateProductCards() {
     const productCards = document.querySelectorAll(".product-card");
 
-    // console.log(productCards)
-
     productCards.forEach(card => {
         
         const productId = card.getAttribute('data-product-id');
 
         const product = productsData[productId];
-
-        console.log(product)
-        console.log("productId is " + productId + " and the product (productsData[productId] is above)")
 
         card.querySelector('.product-image').textContent = product.image;
         card.querySelector('.product-name').textContent = product.name;
@@ -110,7 +105,28 @@ function populateProductCards() {
 function addToCart(id) {
     cart.push(productsData[id]);
 
-    console.log(cart);
+    // 
+    const parentElement = document.getElementById('sidebarcontainer')
+
+    const newProductCardCart = document.createElement("div");
+    newProductCardCart.classList.add("product-card-cart");
+
+    newProductCardCart.innerHTML = `
+    <div class="card-cart-img"></div>
+    <div class="card-cart-container">
+      <div class="card-cart-title">iPhone 15 Pro</div>
+      <div class="card-cart-container">...</div>
+    </div>
+  `;
+    // 
+
+    console.log(newProductCardCart);
+
+    parentElement.appendChild(newProductCardCart)
+}
+
+function addDiv() {
+
 }
 
 document.addEventListener('DOMContentLoaded', populateProductCards);
