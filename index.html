@@ -207,7 +207,7 @@
     </div>
 
     <div id="sidebar" class="sidebar">
-            <div class="cart-header">
+            <div class="cart-header" id="cartHeader">
                 <h4>🛍️ Shopping Cart</h4>
                 <button class="closing-btn" onclick="closeSidebar()">X</button>
             </div>
@@ -218,14 +218,31 @@
             </div>
         </div>
 
-        <div class="total-cart">
+        <div class="total-cart" id="totalCart">
             <div class="total-cart-text">
                 <h4>Total</h4>
-                <h4>0$</h4>
+                <h4 id="total">0$</h4>
             </div>
-            <button class="checkout">Checkout</button>
+            <button class="checkout" onclick="showCheckout()">Checkout</button>
         </div>
+<!-- Check out form -->
+        <div class="checkout-form" id="checkoutForm">
+            <button class="close-checkout" id="closeCheckout" onclick="closeCheckout()">Back to Cart</button>
 
+            <form onsubmit="processOrder(event)">
+                <div class="form-section">
+                     <h4>📦 Shipping Information</h4>
+                     <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                         <input type="text" id="fullName" name="fullName" required >
+                     </div>
+                     <div class="form-group">
+                        <label for="email">Email</label>
+                         <input type="email" id="email" name="email" required>
+                     </div>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="./script.js"></script>

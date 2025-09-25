@@ -268,10 +268,18 @@ footer {
 .card-cart-img {
     width: 55px;
     height: 55px;
-    background: rgb(175, 175, 175);
+    background: rgb(228, 228, 228);
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }
 
 .card-cart-title {
     font-weight: 500;
+}
+
+.checkout-form {
+    display: none;
 }

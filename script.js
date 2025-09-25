@@ -24,6 +24,20 @@ function closeSidebar() {
     document.body.style.overflow = ''; 
 }
 
+function showCheckout() {
+    if (cart.length > 0) {
+        document.getElementById('emptyCart').style.display = 'none';
+        document.getElementById('totalCart').style.display = 'none';
+        document.getElementById('sidebarcontainer').style.display = 'none';
+        
+        document.getElementById('checkoutForm').style.display = 'block';
+    }
+}
+
+function closeCheckout() {
+
+}
+
 const productsData = {
     1: {
         name: "iPhone 15 Pro",
@@ -84,6 +98,7 @@ const productsData = {
 };
 
 let = cart = [];
+let total = 0;
 
 function populateProductCards() {
     const productCards = document.querySelectorAll(".product-card");
@@ -105,8 +120,12 @@ function populateProductCards() {
 function addToCart(id) {
     cart.push(productsData[id]);
 
-    // 
+    const product = productsData[id];
     const parentElement = document.getElementById('sidebarcontainer')
+    const totalId = document.getElementById('total');
+
+    total += product.price;
+    totalId.textContent = "$ " + total;
 
     const newProductCardCart = document.createElement("div");
     newProductCardCart.classList.add("product-card-cart");
@@ -118,15 +137,12 @@ function addToCart(id) {
       <div class="card-cart-container">...</div>
     </div>
   `;
-    // 
 
-    console.log(newProductCardCart);
+    newProductCardCart.querySelector('.card-cart-title').textContent = product.name;
+    newProductCardCart.querySelector('.card-cart-img').textContent = product.image;
 
-    parentElement.appendChild(newProductCardCart)
+    parentElement.appendChild(newProductCardCart);
 }
 
-function addDiv() {
-
-}
 
 document.addEventListener('DOMContentLoaded', populateProductCards);
