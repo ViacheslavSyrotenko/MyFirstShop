@@ -30,12 +30,16 @@ function showCheckout() {
         document.getElementById('totalCart').style.display = 'none';
         document.getElementById('sidebarcontainer').style.display = 'none';
         
-        document.getElementById('checkoutForm').style.display = 'block';
+        document.getElementById('checkoutForm').style.display = 'flex';
     }
 }
 
 function closeCheckout() {
-
+        document.getElementById('emptyCart').style.display = 'none';
+        document.getElementById('totalCart').style.display = 'flex';
+        document.getElementById('sidebarcontainer').style.display = 'block';
+        
+        document.getElementById('checkoutForm').style.display = 'none';
 }
 
 const productsData = {
