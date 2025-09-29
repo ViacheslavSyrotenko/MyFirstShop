@@ -259,7 +259,7 @@
                      
                     <div class="form-group">
                         <label for="country">Country</label>
-                        <select name="country" id="country" required>
+                        <select id="country" name="country" required>
                              <option value="">Select Country</option>
                              <option value="UA">Ukraine</option>
                              <option value="BE">Belgium</option>
@@ -275,9 +275,9 @@
                 <div class="form-section">
                     <h4>Payment Information</h4>
                     <div class="payment-methods">
-                        <div class="payment-method" onclick="selectPayment('credit')">Credit Card</div>  
-                        <div class="payment-method" onclick="selectPayment('paypal')">PayPal</div>  
-                        <div class="payment-method" onclick="selectPayment('apple')">Apple Pay</div>  
+                        <div class="payment-method credit" onclick="selectPayment('credit')">Credit Card</div>  
+                        <div class="payment-method paypal" onclick="selectPayment('paypal')">PayPal</div>  
+                        <div class="payment-method apple" onclick="selectPayment('apple')">Apple Pay</div>  
                     </div>
 
                     <div class="creditCardForm">

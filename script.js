@@ -31,6 +31,7 @@ function showCheckout() {
         document.getElementById('sidebarcontainer').style.display = 'none';
         
         document.getElementById('checkoutForm').style.display = 'flex';
+        document.getElementById('checkoutTotal').textContent = "$ " + total;
     }
 }
 
@@ -146,6 +147,20 @@ function addToCart(id) {
     newProductCardCart.querySelector('.card-cart-img').textContent = product.image;
 
     parentElement.appendChild(newProductCardCart);
+}
+
+function selectPayment(method) {
+
+    document.querySelectorAll('.payment-method').forEach(btn => btn.classList.remove('active'));
+    document.querySelector('.creditCardForm').style.display = 'none'
+    
+    console.log(document.querySelector('.' + method));
+
+    if (method === 'credit'){
+        document.querySelector('.creditCardForm').style.display = 'block'
+    }
+
+    document.querySelector('.' + method).classList.add('active');
 }
 
 
