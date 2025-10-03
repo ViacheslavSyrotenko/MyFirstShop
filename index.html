@@ -229,31 +229,31 @@
         <div class="checkout-form" id="checkoutForm">
             <button class="close-checkout" id="closeCheckout" onclick="closeCheckout()">Back to Cart</button>
 
-            <form class="form-container" onsubmit="processOrder(event)">
+            <form autocomplete="nope" class="form-container" onsubmit="processorder(event)">
                 <div class="form-section">
                      <h4>📦 Shipping Information</h4>
                      <div class="form-group">
                         <label for="fullName">Full Name</label>
-                         <input type="text" id="fullName" name="fullName" required >
+                         <input type="text" id="fullName" name="fullName" required autocomplete="nope">
                      </div>
                      <div class="form-group">
                         <label for="email">Email</label>
-                         <input type="email" id="email" name="email" required>
+                         <input type="email" id="email" name="email" required autocomplete="nope">
                      </div>
                      <div class="form-group">
-                        <label for="address">Address</label>
-                         <input type="text" id="address" name="address" required>
+                        <label for="phone">Phone Number</label>
+                         <input type="text" id="phone" name="phone" required autocomplete="nope">
                      </div>
 
                      <div class="form-row">
                         <div class="form-group">
                             <label for="city">Address</label>
-                            <input type="text" id="city" name="city" required>
+                            <input type="text" id="city" name="city" required autocomplete="nope">
                         </div>
 
                         <div class="form-group">
                             <label for="zipCode">ZipCode</label>
-                            <input type="text" id="zipCode" name="zipCode ">
+                            <input type="text" id="zipCode" name="zipCode" autocomplete="nope">
                         </div>
                     </div>
                      
