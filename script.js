@@ -164,4 +164,10 @@ function selectPayment(method) {
 }
 
 
+// Form
+
+const form = document.getElementById(formContainer);
+
+form.addEventListener("submit")
+
 document.addEventListener('DOMContentLoaded', populateProductCards);
