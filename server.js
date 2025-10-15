@@ -7,7 +7,6 @@ const uri = "mongodb+srv://slavikden09_db_user:VPG9FNVpVF5upkhH@cluster0.fetmmc8
 const client = new MongoClient(uri);
 
 
-
 let ordersCollection; // Make it accessible globally
 
 async function connectDB() {
@@ -16,7 +15,7 @@ async function connectDB() {
         console.log("Conected to MongoDB")
 
         const db = client.db("ordersDB");
-        const ordersCollection = db.collection("orders");
+        ordersCollection = db.collection("orders");
 
 
     } catch (err) {

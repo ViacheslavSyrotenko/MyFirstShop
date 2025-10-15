@@ -174,26 +174,17 @@ const form = document.getElementById("formContainer"); // Find the form in the p
 form.addEventListener("submit", async (event) => {
   event.preventDefault(); // Stops the page from reloading
 
-  // Get the values the user entered
-    const selectedFullName = form.fullName.value;
-    const selectedEmail = form.email.value;
-    const selectedPhone = form.phone.value;
-    const selectedCity = form.city.value;
-    const selectedZipCode = form.zipCode.value;
-    const selectedAddress = form.country.value;
-
     const orderData = {
-        fullName: selectedFullName,
-        email: selectedEmail,
-        phone: selectedPhone,
-        city: selectedCity,
-        zipCode: selectedZipCode,
-        address: selectedAddress
-    }
+        fullName: form.fullName.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        city: form.city.value,
+        zipCode: form.zipCode.value
+    };
 
     try {
         // Send the data to the server using Fetch API
-        const response = await fatch("/api/order", {
+        const response = await fetch("/api/post", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(orderData)
@@ -207,7 +198,7 @@ form.addEventListener("submit", async (event) => {
         statusMessage.textContent = responseData.message;
 
     } catch (error) {
-
+        console.error("Error sending order: ", error);
     }
 })
 
