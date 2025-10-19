@@ -102,7 +102,7 @@ const productsData = {
     }
 };
 
-let = cart = [];
+let cart = [];
 let total = 0;
 
 function populateProductCards() {
@@ -123,10 +123,10 @@ function populateProductCards() {
 }
 
 function addToCart(id) {
-    cart.push(productsData[id]);
 
     const product = productsData[id];
-    const parentElement = document.getElementById('sidebarcontainer')
+
+    const parentElement = document.getElementById('sidebarcontainer');
     const totalId = document.getElementById('total');
 
     total += product.price;
@@ -138,7 +138,7 @@ function addToCart(id) {
     newProductCardCart.innerHTML = `
     <div class="card-cart-img"></div>
     <div class="card-cart-container">
-      <div class="card-cart-title">iPhone 15 Pro</div>
+      <div class="card-cart-title"></div>
       <div class="card-cart-container">...</div>
     </div>
   `;
@@ -146,7 +146,38 @@ function addToCart(id) {
     newProductCardCart.querySelector('.card-cart-title').textContent = product.name;
     newProductCardCart.querySelector('.card-cart-img').textContent = product.image;
 
-    parentElement.appendChild(newProductCardCart);
+    if (cart.length != 0) {
+
+        const mappedCart = cart.map((x) => x.name);
+
+        if (mappedCart.some((x) => x === newProductCardCart.querySelector('.card-cart-title').textContent)){
+            console.log("This product alredy in the cart");
+
+            const foundIndex = cart.findIndex((x) => x.name === newProductCardCart.querySelector('.card-cart-title').textContent);
+
+            cart[foundIndex].quantity +=1;
+            console.log(cart[foundIndex]);
+            console.log("way1")
+
+
+        }  else {
+            product.quantity = 1;
+            cart.push(product);
+            console.log("way2")
+            parentElement.appendChild(newProductCardCart);
+
+
+        }
+
+    } else {
+        product.quantity = 1;
+        cart.push(product);
+        console.log("way3")
+        parentElement.appendChild(newProductCardCart);
+
+
+    }
+
 }
 
 function selectPayment(method) {
